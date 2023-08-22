@@ -18,7 +18,6 @@ const ul=document.createElement('ul');
 
 
 
-
 //addEventListener
 document.addEventListener('DOMContentLoaded', () => {
    form.addEventListener('submit', (e) => {
@@ -32,30 +31,23 @@ document.addEventListener('DOMContentLoaded', () => {
 //function
 function buildFill(){
     
-    const selectedOption = selectElement
-    formList.appendChild(div1);
-        div1.appendChild(p);
-        div1.appendChild(ul);
-     p.textContent = `You Subscribed as: ${selectedOption.value}`;
+    div1.appendChild(p); 
+    div1.appendChild(ul);
     
    
 //function of selected option
-selectElement.addEventListener("click", () => {
-    selectElement.reset();
 selectElement.addEventListener('change', () =>{
-    
-    p.textContent = `You Subscribed as: ${selectedOption.value}`;
-})
 
-
+    p.textContent = `You Subscribed as: ${selectElement.value}`;
 })
 
 
 //function to create NodeList from user input   
  inputs.forEach(function (input) {
-    const li=document.createElement('li')
+   
     if (input.value) {
-        
+        const li=document.createElement('li')
+        formList.appendChild(div1);
         ul.appendChild(li);
 
         li.textContent = input.value;
@@ -88,11 +80,3 @@ let btn2 = document.createElement('button');
 function handleDelete(){
     div1.remove(formList.childNodes)
 }
-
-
-
-
-
-
-
-
