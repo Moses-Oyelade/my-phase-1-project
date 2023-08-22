@@ -41,7 +41,7 @@ function buildFill(){
    
 //function of selected option
 selectElement.addEventListener("click", () => {
-    
+    selectElement.reset();
 selectElement.addEventListener('change', () =>{
     
     p.textContent = `You Subscribed as: ${selectedOption.value}`;
