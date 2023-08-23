@@ -22,34 +22,31 @@ const ul=document.createElement('ul');
 document.addEventListener('DOMContentLoaded', () => {
    form.addEventListener('submit', (e) => {
         e.preventDefault();
-        chooseFill()
         buildFill()
         form.reset();
     })
 })
 
 
-
-function chooseFill(){
+//function
+function buildFill(){
+    
     div1.appendChild(p); 
+    div1.appendChild(ul);
+    
+   
 //function of selected option
 selectElement.addEventListener('change', () =>{
 
     p.textContent = `You Subscribed as: ${selectElement.value}`;
 })
 
-}
-
-
-//function
-function buildFill(){
-
-    const li=document.createElement('li')
-    div1.appendChild(ul);
 
 //function to create NodeList from user input   
  inputs.forEach(function (input) {
+   
     if (input.value) {
+        const li=document.createElement('li')
         formList.appendChild(div1);
         ul.appendChild(li);
 
